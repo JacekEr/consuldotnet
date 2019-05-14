@@ -11,7 +11,7 @@ steps:
     projects: '**/*.csproj'
     restoreNuGet: false
     solution: '**/*.sln'
-    nugetConfigPath: 'nuget.config'
+    nugetConfigPath: 'NuGet.config'
 - template: windows/dotnet-test.yml@templates
   parameters:
     sourceDirectory: '$(Build.SourcesDirectory)'
