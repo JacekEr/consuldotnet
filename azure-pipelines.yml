@@ -3,13 +3,13 @@ resources:
     - repository: templates
       type: git
       name: devops.pipelinetemplates
-pool:
-  name: Default
+# pool:
+#  name: Default
 steps:
 - template: shared/dotnet-build.yml@templates
   parameters:
     projects: '**/*.csproj'
-    restoreNuGet: true
+    restoreNuGet: false
     solution: '**/*.sln'
     nugetConfigPath: 'nuget.config'
 - template: windows/dotnet-test.yml@templates
