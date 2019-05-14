@@ -19,4 +19,4 @@ steps:
 - template: shared/dotnet-pack.yml@templates
   parameters:
     srcFolder: ''
-    packages: ['Consul'']  
+    packages: ['Consul']  
