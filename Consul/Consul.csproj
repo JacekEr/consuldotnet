@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <VersionPrefix>0.7.2.6</VersionPrefix>
-    <TargetFrameworks>netstandard1.3;net45</TargetFrameworks>
+    <VersionPrefix>0.7.3.0</VersionPrefix>
+    <TargetFrameworks>netstandard1.3</TargetFrameworks>
     <AssemblyName>Consul</AssemblyName>
     <PackageId>Consul</PackageId>
     <PackageTags>Consul;service discovery;distributed locking;health checking</PackageTags>
