@@ -15,6 +15,7 @@ steps:
     mixedSolution: false
 - template: linux/dotnet-test.yml@templates
   parameters:    
+    sourceDirectory: '$(Build.SourcesDirectory)/'
     minCoverage: 10
     runIntegrationTestOnMasterOnly: false
 - template: shared/dotnet-pack.yml@templates
