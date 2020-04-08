@@ -7,10 +7,9 @@ pool:
   name: Hosted Ubuntu 1604
 steps:
 - template: shared/dotnet-build.yml@templates
-  parameters:
     solution: '**/*.sln'
     projects: '**/*.csproj'
-    restoreNuGet: false
+    restoreNuGet: true
     nugetConfigPath: 'NuGet.config'
     mixedSolution: false
 - template: linux/dotnet-test.yml@templates
