@@ -3,20 +3,17 @@ resources:
     - repository: templates
       type: git
       name: devops.pipelinetemplates
-# pool:
-#  name: Default
+pool:
+  name: Hosted Ubuntu 1604
 steps:
 - template: shared/dotnet-build.yml@templates
-  parameters:
-    projects: '**/*.csproj'
-    restoreNuGet: false
-    solution: '**/*.sln'
-    nugetConfigPath: 'NuGet.config'
-- template: windows/dotnet-test.yml@templates
-  parameters:
-    sourceDirectory: '$(Build.SourcesDirectory)'
-    minCoverage: 45
+  parameters:    
+    mixedSolution: false
+    nugetConfigPath: ''
+- template: linux/dotnet-test.yml@templates
+  parameters:    
+    minCoverage: 10
+    runIntegrationTestOnMasterOnly: false
 - template: shared/dotnet-pack.yml@templates
-  parameters:
-    srcFolder: ''
-    packages: ['Consul']  
+  parameters:    
+    packages: ['Consul']
